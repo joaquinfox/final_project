@@ -1,16 +1,19 @@
 Math Monster (Math Hero?)
 A math game for learning arithmitec at a first grade level.
 What does it do?
-MM allows a user to select difficulty levels 1-3 and generates a game of math problems at that level. Each question has a time limit. Game stats are persisted to a file (automatically)
-TODO: When/how can user access game history?
+MM allows a user to select difficulty levels 1-3 and generates a game of math problems at that level. Game time and other stats are tracked and  persisted to a file (automatically)
+
+TODO: When/how can user access game history? 
+    - Returning players get a print out of their game stats when the program is launched.
+    - first time players get some introductory information about the game, presented in tabular form in the CL
 
 TODO: MVP difficulty level can be specified as command line argument, or if no argument is provided, as a string at the input prompt. 
     EXTENSION: add settings for game length, and problem types (+ , - , * , /). 
     EXTENSION: add web/desktop interface.
 
-The program then builds a game of (default length) 10 questions, and presents the questions one at a time. Each question has a time limit and a visible counter which counts down from 10. Upon reaching 0, the game does some graphical version of an explosion, or other dire conclusion. On answering correctly or incorrectly (with time remaining) the game generates some user feedback.
+The program then builds a game of (default length) 10 questions, and presents the questions one at a time. On answering correctly or incorrectly (with time remaining) the game generates some user feedback.
 
-TODO: figure out the graphical capabilities of the Command line
+
 EXTENSION: make game length variable on user input
 
 Questions are built around the four basic operators +, -, * and /.
@@ -80,3 +83,16 @@ if answer is wrong and time remains
     continue
 if answer is right
     next question
+LOG 5/10/23
+Abandoning the timer feature. Too hard to implement a cl timer, while also prompting for user input, the two features overwrite eachother or interfere in other ways.
+New game-flow:
+- prompt for name and level
+- present questions in sequence, without time limit.
+- instead of a timer, track time and print total time at end.
+- print a welcome sign
+
+Welcome to Math Hero!
+Choose a username and choose a level. We will build you a ten question game. Answer as many as you can, as fast as you can, and we will score you
+
+
+TTD
