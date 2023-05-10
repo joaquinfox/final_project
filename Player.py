@@ -1,18 +1,20 @@
+class Game:
+    def __init__(self, username, date, game_level, score, time):
+        self.username = username
+        self.date = date
+        self.game_level = game_level
+        self.score = score
+        self.time = time
+
 class Player:
     def __init__(self, username):
         self.username = username
         self.games = {}
 
     def add_game(self, date, game_level, score, time):
-        game = {'username': self.username, 'date': date, 'game_level': game_level, 'score': score, 'time': time}
+        game = Game(self.username, date, game_level, score, time)
         self.games[date] = game
 
-    def get_high_score(self, game_level):
-        high_score = 0
-        for game in self.games.values():
-            if game['game_level'] == game_level and game['score'] > high_score:
-                high_score = game['score']
-        return high_score
 
 
 
