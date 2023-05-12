@@ -1,20 +1,36 @@
-Math Monster (Math Hero?)
-A math game for learning arithmitec at a first grade level.
+Math Hero
+A math game for learning arithmetic at a first grade level.
 What does it do?
-MM allows a user to select difficulty levels 1-3 and generates a game of math problems at that level. Game time and other stats are tracked and  persisted to a file (automatically)
+It generates a game of 10 questions, scores the results, and persists the results to a file.
+MVP
+- execute math_hero.py from a command line
+- prompted for username
+- print question
+- evaluate answer
+    - print right or wrong
+- when last question is submitted, game ends
+- print a final score
+- write stats to file.
+
+In the extension there will be a time limit for each question but for now, user can take as long as they want, tho time is recorded. and other improvements.
+What get's recorded/written to file?
+- game length (time it took)
+- username
+- score out of 10
+- date
+
+
 
 TODO: When/how can user access game history? 
     - Returning players get a print out of their game stats when the program is launched.
     - first time players get some introductory information about the game, presented in tabular form in the CL
 
 TODO: MVP difficulty level can be specified as command line argument, or if no argument is provided, as a string at the input prompt. 
-    EXTENSION: add settings for game length, and problem types (+ , - , * , /). 
-    EXTENSION: add web/desktop interface.
 
-The program then builds a game of (default length) 10 questions, and presents the questions one at a time. On answering correctly or incorrectly (with time remaining) the game generates some user feedback.
+The program then builds a game of (default length) 10 questions, and presents the questions one at a time. On answering correctly or incorrectly (with time remaining) the game generates some user feedback. TODO: What kind of feedback?
 
 
-EXTENSION: make game length variable on user input
+
 
 Questions are built around the four basic operators +, -, * and /.
 Difficulty is increased by increasing integer sizes, single, double or triple digit.
@@ -95,4 +111,7 @@ Welcome to Math Hero!
 Choose a username and choose a level. We will build you a ten question game. Answer as many as you can, as fast as you can, and we will score you
 
 
-TTD
+EXTENSION: allow a user to select difficulty levels 1-3 and generates a game of math problems at that level. Game time and other stats are tracked and  persisted to a file (automatically)
+EXTENSION: make game length variable on user input
+EXTENSION: add settings for game length, and problem types (+ , - , * , /). 
+EXTENSION: add web/desktop interface.
