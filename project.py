@@ -1,60 +1,41 @@
-# TODO class Player
-# TODO class Game
-# TODO build_game
-# TODO play_game
-import re
-
-# import time
-# from timer import question_timer
+from player import Player
+from game import Game
+import re, datetime
 
 
 def main():
-    players = ["bob", "blue", "boo"]
-    game_setup(players)
-    ...
+    username: str = get_username()
+    counter = 0
+    score_card = 0
+    while counter < 10:
+        question = generate_question()
+        print(question)
+        counter += 1
+        answer = input("Answer: ").strip()
+        if check_answer(answer):
+            score_card += 1
+            print("Correct!")
+        else:
+            print("Incorrect!")
+    print(f"Your score is {score_card}")
 
 
-def game_setup(players):
-    player = get_username(players)
-    level = get_level()
-    build_game(level)
-    # TODO: build Player obj
-    # TODO: build Game obj
-    print("LOG", level)
+def get_username() -> str:
+    return input("Username: ")
 
 
-def get_username(players: str) -> str:
-    """
-    :param players: list of usernames
-    :type players: list of str
-    :return: username
-    :rtype: str
-    """
-    username = input("Username: ")
-    if username not in players:
-        players.append(username)
-        # TODO print_welcome(new)
-    else:
-        # TODO print_welcom(old)
-        ...
-    return username
+def generate_question() -> str:
+    return "foo"
 
 
-def get_level() -> int:
-    """
-    :return: level
-    :rtype: int
-    """
-    while True:
-        pattern = r"(1|2|3)"
-        level = input("Level (1 - 3): ")  # TODO validate level
-        if matches := re.search(pattern, level):
-            break
-    return int(level)
+def check_answer(answer: str) -> bool:
+    return True
 
+def timer():
+    pass
 
-def build_game(l: int):
-    ...
+def get_date():
+    pass
 
 
 if __name__ == "__main__":

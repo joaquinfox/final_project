@@ -10,13 +10,14 @@ class Player:
         self.game_history.append(game)
         self.game_history()
 
-
     def write_game_history(self, game):
+        """Each player objects keeps its own game history. All players share the same game history file."""
         file = open("game_history.txt", "a")
         file.write(f"{game}\n")
         file.close()
 
     def read_game_history(self):
+        """If a username is not found in the game history file, the user is created and appended to that file."""
         try:
             with open("game_history.txt", "r") as file:
                 lines = file.readlines()
@@ -25,6 +26,8 @@ class Player:
         except FileNotFoundError:
             with open("game_history.txt", "w") as file:
                 file.write(f"Game history for {self.username}\n")
+        finally:    
+            file.close()
 
     def __str__(self):
         return f"{self.username}"
@@ -37,10 +40,8 @@ class Player:
         except FileNotFoundError:
             with open("game_history.txt", "w") as file:
                 file.write(f"Game history for {self.username}\n")
-
-    def add_test(self, game):
-        self.game_history.append(self.username, game)
-
+        finally:
+            file.close()
 
 # player = Player("John")
 # game1 = Game(player.username,"2020-01-02",70, "8:50")

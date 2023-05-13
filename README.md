@@ -24,13 +24,16 @@ MVP: game interface will be the command line. Game parameters will be entered as
 GAMEFLOW                                           LOGIC
 - execute mathmonster.py                            CL
 - get user name                                     get_username
-- Instantiate a Player with the username            main() 
-- Instantiate a Game instance                       main()
-- generate question set                             generate_questions()
-- print questions and handle input                  game_control()
+- generate a question                               geneate_question()
+- start game timer                                  timer()
+- print questions and handle input                  play_game()
 - evaluate each answer                              check_answer()
 - print feedback                                    main()
 - When game is over, 
+        - get game duration                         timer()
+        - get date                                  get_date()
+        - Instantiate a Player with the username    main() 
+        - Instantiate a Game instance               main()
         - write game to file                        Class method write_game_history
         - print game stats                          Class method print_game_history 
 
