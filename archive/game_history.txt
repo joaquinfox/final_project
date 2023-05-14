@@ -1,0 +1,4 @@
+game stats for John:
+	 Date: 2020-01-02, score: 70, time taken: ['8', '50']
+game stats for Mary:
+	 Date: 2020-01-04, score: 90, time taken: ['11', '30']

@@ -1,0 +1,6 @@
+*.pyc
+./archive/*
+scratch.pyc
+game_history.txt
+```
+
