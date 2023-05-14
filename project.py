@@ -27,11 +27,7 @@ def main():
             print("Incorrect!")
             continue
     end = datetime.datetime.now()
-    game_duration = end - start
-    total_seconds = game_duration.total_seconds()
-    minutes =int(total_seconds /60)
-    seconds = int(total_seconds % 60)
-    game_duration =f"{minutes}:{seconds}"
+    minutes, seconds = calc_duration(start, end)
     print(f'game_duration: {minutes}:{seconds}')
     print(f"Your score is {score_card}")
 
@@ -68,7 +64,12 @@ def check_answer(question: str, answer: str) -> bool:
         return False
     return True
 
-
+def calc_duration(start, end):
+    game_duration = end - start
+    total_seconds = game_duration.total_seconds()
+    minutes =int(total_seconds /60)
+    seconds = int(total_seconds % 60)
+    return minutes, seconds
 
 
 if __name__ == "__main__":
