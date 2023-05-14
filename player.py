@@ -16,7 +16,7 @@ class Player:
         file.write(f"{game}\n")
         file.close()
 
-    def read_game_history(self):
+    def read_game_history(self) -> None:
         """If a username is not found in the game history file, the user is created and appended to that file."""
         try:
             with open("game_history.txt", "r") as file:
@@ -26,7 +26,7 @@ class Player:
         except FileNotFoundError:
             with open("game_history.txt", "w") as file:
                 file.write(f"Game history for {self.username}\n")
-        finally:    
+        finally:
             file.close()
 
     def __str__(self):
@@ -34,7 +34,7 @@ class Player:
 
     def print_game_history(self):
         try:
-            file = open("game_history.txt", "r")
+            file = open("game_history.txt", "r").sort()
             for line in file:
                 print(line)
         except FileNotFoundError:
@@ -42,6 +42,7 @@ class Player:
                 file.write(f"Game history for {self.username}\n")
         finally:
             file.close()
+
 
 # player = Player("John")
 # game1 = Game(player.username,"2020-01-02",70, "8:50")

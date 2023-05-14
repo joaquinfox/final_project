@@ -70,6 +70,7 @@ Welcome to Math Hero!
 Choose a username. We will build you a ten question game. Answer as many as you can, as fast as you can, and we will score you, and track your game performance.
 
 EXTENSIONS:
+- Format output of duration
 - Add a time limit for each question, and some kind of graphical count down or spinner feature
 - Returning players get a print out of their game stats when the program is launched.
 - first time players get some introductory information about the game, presented in tabular form in the CL
