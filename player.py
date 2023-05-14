@@ -4,9 +4,6 @@ class Player:
         self.username = username
         self.game_history = game_history
 
-    def add_game(self, game):
-        self.game_history.append(game)
-        self.game_history()
 
     def write_game_history(self, game):
         """Each player objects keeps its own game history. All players share the same game history file."""

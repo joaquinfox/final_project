@@ -61,8 +61,10 @@ def generate_question() -> str:
 def check_answer(question: str, answer: str) -> bool:
     correct_answer = eval(question)
     rounded_answer = round(correct_answer, 4) # round() creates a float 
-    # print('LOG', rounded_answer, answer)
-    if float(answer) != rounded_answer:
+    try:
+        if float(answer) != rounded_answer:
+            return False
+    except ValueError:
         return False
     return True
 
