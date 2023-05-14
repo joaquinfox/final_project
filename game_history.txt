@@ -1,2 +1,12 @@
 game stats for boo:
-	 Date: 2023-05-14, score: 10, time taken: ['0', '00', '35.468646']
+	 Date: 2023-05-14, score: 0, time taken: ['2', '45']
+game stats for boo:
+	 Date: 2023-05-14, score: 10, time taken: ['0', '32']
+game stats for boo:
+	 Date: 2023-05-14, score: 10, time taken: ['0', '45']
+game stats for boo:
+	 Date: 2023-05-14, score: 10, time taken: ['1', '30']
+game stats for boo:
+	 Date: 2023-05-14, score: 8, time taken: ['0', '26']
+game stats for boo:
+	 Date: 2023-05-14, score: 4, time taken: ['1', '14']

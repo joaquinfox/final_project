@@ -28,7 +28,11 @@ def main():
             continue
     end = datetime.datetime.now()
     game_duration = end - start
-    print('game_duration', game_duration)
+    total_seconds = game_duration.total_seconds()
+    minutes =int(total_seconds /60)
+    seconds = int(total_seconds % 60)
+    game_duration =f"{minutes}:{seconds}"
+    print(f'game_duration: {minutes}:{seconds}')
     print(f"Your score is {score_card}")
 
     player = Player(username)
@@ -56,8 +60,9 @@ def generate_question() -> str:
 
 def check_answer(question: str, answer: str) -> bool:
     correct_answer = eval(question)
-    print('LOG', correct_answer)
-    if int(answer) != correct_answer:
+    rounded_answer = round(correct_answer, 4) # round() creates a float 
+    print('LOG', rounded_answer, answer)
+    if float(answer) != rounded_answer:
         return False
     return True
 
