@@ -1,12 +1,7 @@
+Game history
 game stats for boo:
-	 Date: 2023-05-14, score: 0, time taken: ['2', '45']
-game stats for boo:
-	 Date: 2023-05-14, score: 10, time taken: ['0', '32']
-game stats for boo:
-	 Date: 2023-05-14, score: 10, time taken: ['0', '45']
-game stats for boo:
-	 Date: 2023-05-14, score: 10, time taken: ['1', '30']
-game stats for boo:
-	 Date: 2023-05-14, score: 8, time taken: ['0', '26']
-game stats for boo:
-	 Date: 2023-05-14, score: 4, time taken: ['1', '14']
+	 Date: 2023-05-14, score: 4, time taken: ['0', '28']
+game stats for mary:
+	 Date: 2023-05-14, score: 1, time taken: ['0', '7']
+game stats for zig:
+	 Date: 2023-05-14, score: 2, time taken: ['0', '13']

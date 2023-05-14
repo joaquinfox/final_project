@@ -1,5 +1,3 @@
-from game import Game
-
 
 class Player:
     def __init__(self, username, game_history=[]):
@@ -25,7 +23,7 @@ class Player:
                 print(line.rstrip())
         except FileNotFoundError:
             with open("game_history.txt", "w") as file:
-                file.write(f"Game history for {self.username}\n")
+                file.write(f"Game history\n")
         finally:
             file.close()
 
@@ -39,17 +37,7 @@ class Player:
                 print(line)
         except FileNotFoundError:
             with open("game_history.txt", "w") as file:
-                file.write(f"Game history for {self.username}\n")
+                file.write(f"Game history\n")
         finally:
             file.close()
-
-
-# player = Player("John")
-# game1 = Game(player.username,"2020-01-02",70, "8:50")
-# game2 = Game(player.username,"2020-01-03",80, "8:40")
-# player.write_game_history(game1)
-# player.print_game_history()
-# player2 = Player("Mary", 18)
-# game3= Game(player2.username,"2020-01-04",90, "11:30")
-# player2.write_game_history(game3)
-# player2.print_game_history()
+  
