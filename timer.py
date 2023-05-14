@@ -8,9 +8,15 @@ import time
 '''
 
 def question_timer(s: int) -> None:
-    for remaining in range(1,s + 1,1):
-        print(f"\033[1;31m {remaining} seconds\033[0m  ", end='')
-        time.sleep(1)
-        print('\r', end='')
+    # try:
+        for remaining in range(1,s + 1,1):
+            print(f"\033[1;31m {remaining} seconds\033[0m  ", end='')
+            time.sleep(1)
+            print('\r', end='')
+            answer = input("answer: ")
+            if answer == "1":
+                break
+    # except KeyboardInterrupt:
+    #     pass
 
 question_timer(10)

@@ -4,10 +4,6 @@
 # TODO play_game
 import re
 
-# import time
-# from timer import question_timer
-
-
 def main():
     players = ["bob", "blue", "boo"]
     game_setup(players)
@@ -54,6 +50,8 @@ def get_level() -> int:
 
 
 def build_game(l: int):
+    '''
+    takes a level and builds a game object, then calls play_game with that object'''
     ...
 
 
