@@ -2,25 +2,21 @@
 #### Video Demo: 
 #### Descriptioin
 
-MH generates a game of 10 questions, scores the results, and persists game stats to a file.
+MH is a tool to learn math. The program generates a game of 10 questions, scores the results, and persists game stats to a file. The game interface is the command line. Game execution is controlled from main() which calls helper functions to generate random questions and check answers.
+
+After the final question is answered, two custom objects are instantiated, a Game object which encapsulates game data, and a Player object, which encapsulates the file read and write functionality.
+Class methods are then called to perform the file IO.
 
 #### MVP
-A user plays the game
+The user can
 - execute math_hero.py from a command line
-- Is prompted to input username on the command line.
-- User recieves a question on the CL
-- User inputs and answer and hits enter to submit
-- Question is evaluated and right wrong feedback is printed to the screen
-- the next question is printed
+- input username on the command line.
+- receive a question on the CL
+- inputs an answer 
+- see right wrong feedback printed to the screen
 - when 10 question have been completed, game stats are written to the game_history file and game stats are printed to the terminal
 
-The program  builds a game of (default length) 10 questions, and presents the questions one at a time. On answering correctly or incorrectly (with time remaining) the game generates some user feedback. TODO: What kind of feedback?
-
-MH further, returns a user score, and persists results to a file, with the date of the game, a user name, and a score. User is able to retrieve and print their game history.
-
-MVP: game interface will be the command line. Game parameters will be entered as argument flags on the CL. Questions will be printed to the CL and responses as well. User will answer via CL.
-
-
+#### Organization
 
 GAMEFLOW                                           LOGIC
 - execute mathmonster.py                            CL
@@ -42,10 +38,7 @@ CLASSES:
 Class Player
     Attributes
     - name
-    - game history
-         list of games played
     Methods
-    - add_game(): appends a game instance to a list
     - write_game_history(): writes a new game to file
     - read_game_history(): reads the current history on file
     - print_game_history():
@@ -57,20 +50,7 @@ Class Game
     - date of game
     - score of game
 
-
-General:
-The program uses the two objects above. Class Game encapsulates game stats which are stored in a list, as an attribute of the Player instance.
-
-Game execution is handled in a series of procedural functions, inside of main(). 
-
-Class Player organizes game results for file write.
-
-
-Introduction:
-Welcome to Math Hero!
-Choose a username. We will build you a ten question game. Answer as many as you can, as fast as you can, and we will score you, and track your game performance.
-
-EXTENSIONS:
+#### EXTENSIONS:
 - Format output of duration
 - Add a time limit for each question, and some kind of graphical count down or spinner feature
 - Returning players get a print out of their game stats when the program is launched.
