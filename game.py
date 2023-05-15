@@ -3,7 +3,7 @@ class Game:
         self.username = username
         self.date = date
         self.score = score
-        self.game_duration = game_duration.split(":")
+        self.game_duration = game_duration
 
     def __str__(self):
         return f"game stats for {self.username}:\n\t Date: {self.date}, score: {self.score}, time taken: {self.game_duration}"

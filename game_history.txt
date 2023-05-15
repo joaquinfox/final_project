@@ -1,8 +1,2 @@
-game stats for moo:
-	 Date: 2023-05-14, score: 0, time taken: ['0', '6']
-game stats for moo:
-	 Date: 2023-05-14, score: 1, time taken: ['0']
-game stats for moo:
-	 Date: 2023-05-14, score: 2, time taken: ['0']
-game stats for moo:
-	 Date: 2023-05-14, score: 2, time taken: ['0']
+game stats for boo:
+	 Date: 2023-05-14, score: 7, time taken: 0:48
