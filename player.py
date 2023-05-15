@@ -1,9 +1,7 @@
 
 class Player:
-    def __init__(self, username, game_history=[]):
+    def __init__(self, username):
         self.username = username
-        self.game_history = game_history
-
 
     def write_game_history(self, game):
         """Each player objects keeps its own game history. All players share the same game history file."""

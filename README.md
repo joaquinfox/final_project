@@ -1,10 +1,11 @@
-Math Hero (MH)
-A math game for learning arithmetic at a first grade level.
-What does it do?
-MH generates a game of 10 questions, scores the results, and persists the results to a file.
+# Math Hero (MH)
+#### Video Demo: 
+#### Descriptioin
 
-MVP Story line
-User can:
+MH generates a game of 10 questions, scores the results, and persists game stats to a file.
+
+#### MVP
+A user plays the game
 - execute math_hero.py from a command line
 - Is prompted to input username on the command line.
 - User recieves a question on the CL
