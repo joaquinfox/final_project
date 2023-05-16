@@ -28,8 +28,8 @@ def main():
     end = datetime.datetime.now()
     minutes, seconds = calc_duration(start, end)
     game_duration = f"{minutes}:{seconds}"
-    print(f"game_duration: {minutes}:{seconds}")
-    print(f"Your score is {score_card}")
+    print(f"Time: {minutes}:{seconds}")
+    print(f"Score: {score_card}")
 
     player = Player(username)
     game = Game(

@@ -1,8 +1,7 @@
 # Math Hero (MH)
-#### Video Demo: 
-#### Descriptioin
-
-MH is a tool to learn math. The program generates a game of 10 questions, scores the results, and persists game stats to a file. The game interface is the command line. Game execution is controlled from main() which calls helper functions to generate random questions and check answers.
+#### Video Demo: https://youtu.be/3gXcUi3Udkc
+#### Description
+MH is a tool to learn math, inspired by my own kid's reckoning with math. My goal was to build a fun, simple interface to practice tons of math problems, and while this version is low on the "fun" gradient, the proof of concept is, I think, a promissing foundation on which to build more intricate and graphically engaging games. The program generates a game of 10 questions, scores the results, and persists game stats to a file. The game interface is the command line. Game execution is controlled from main() which calls helper functions to generate random questions and check answers.
 
 After the final question is answered, two custom objects are instantiated, a Game object which encapsulates game data, and a Player object, which encapsulates the file read and write functionality.
 Class methods are then called to perform the file IO.
@@ -16,7 +15,7 @@ The user can
 - see right wrong feedback printed to the screen
 - when 10 question have been completed, game stats are written to the game_history file and game stats are printed to the terminal
 
-#### Organization
+#### Code Structure
 
 GAMEFLOW                                           LOGIC
 - execute mathmonster.py                            CL
@@ -34,7 +33,7 @@ GAMEFLOW                                           LOGIC
         - write game to file                        Class method write_game_history
         - print game stats                          Class method print_game_history 
 
-CLASSES:
+#### CLASSES:
 Class Player
     Attributes
     - name
@@ -50,8 +49,7 @@ Class Game
     - date of game
     - score of game
 
-#### EXTENSIONS:
-- Format output of duration
+#### EXTENSIONS:...for another day
 - Add a time limit for each question, and some kind of graphical count down or spinner feature
 - Returning players get a print out of their game stats when the program is launched.
 - first time players get some introductory information about the game, presented in tabular form in the CL
